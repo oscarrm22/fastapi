@@ -3,7 +3,7 @@ import requests
 import re
 import copy
 import time
-import html2text
+#import html2text
 import unidecode
 import json
 

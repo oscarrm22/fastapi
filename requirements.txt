@@ -1,7 +1,7 @@
 fastapi
 uvicorn
 pydantic
-bs
+beautifulsoup4
 requests
 re
 copy
