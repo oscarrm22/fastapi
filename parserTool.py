@@ -321,13 +321,14 @@ def start_request():
 
     #Crear json
     toGraph = {"nodes":nodes, "links":links_dic}
-    # jsonString = json.dumps(toGraph)
-    # jsonFile = open("dataToGraph.json", "w")
-    # jsonFile.write(jsonString)
-    # jsonFile.close()
+    jsonString = json.dumps(toGraph)
+    jsonFile = open("dataToGraph2.json", "w")
+    jsonFile.write(jsonString)
+    jsonFile.close()
     
     #add graph dictionary to DB
-    addItemToTable(toGraph)
+    addItemToTable(jsonString)
+
 
 
 

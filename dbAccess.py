@@ -8,13 +8,26 @@ table = dynamodb.Table('GraphGeneratorTest2')
 
 # test_graph = {"nodoId" : 10, "nodoName": "oscar"}
 
+element_id = 0
+
 def addItemToTable(nodesDic):
+    global element_id
     response = table.put_item(
     Item = { 
-        'reqId': str(0),
+        'reqId': str(element_id),
         'graph': str(1),
         'graphDic': nodesDic
         }
     )
 
-# addItemToTable(test_graph)
+    element_id = element_id + 1
+
+def getItemFromTable(key1, key2):
+    response = table.get_item(
+        Key={
+            'reqId': key1,
+            'graph': key2,
+        }
+    )
+    print(response['Item'])
+    return response['Item']

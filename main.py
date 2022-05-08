@@ -31,7 +31,15 @@ def create_item(item: Item):
     names[id] = item.namesList
     printInput(names, id)
     return "Your id is " + str(id)
+
+@app.post("/getItem")
+def create_item(key1: str, key2:str):
+    # getItemFromTable(key1, key2)
+    return getItemFromTable(key1, key2)
+
+
 # @app.post("/createItem2")
 # def create_item2(item: Item):
 #     printInput(item.namesList)
 #     return "new name is " + item.namesList[-1]
+
