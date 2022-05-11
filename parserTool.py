@@ -46,7 +46,7 @@ def print_sites(movies:list):
 #GET HTML
 def load_data(urls:list):
     global  movie_soups
-
+    movie_soups = []
     for i in urls:
         r = requests.get(i)
         movie_soups.append(bs(r.content))
@@ -253,8 +253,8 @@ class PNode:
 
 #**************************************************************************************************************************************
 def start_request():
-    global mnode_list, p_list, pnode_list, num_of_nodes, movie_sites
-    movie_soups = []
+    global mnode_list, p_list, pnode_list, num_of_nodes, movie_sites, movie_soups
+    # movie_soups = []
     mnode_list = []
     p_list = []
     pnode_list = []
