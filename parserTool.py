@@ -258,7 +258,7 @@ def start_request():
     mnode_list = []
     p_list = []
     pnode_list = []
-    print_sites("DBG 1, ",movie_sites)
+    print_sites(movie_sites)
 
     #obtener HTML
     load_data(movie_sites)
