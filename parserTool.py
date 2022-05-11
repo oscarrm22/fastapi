@@ -254,7 +254,10 @@ class PNode:
 #**************************************************************************************************************************************
 def start_request():
     global mnode_list, p_list, pnode_list, num_of_nodes
-
+    movie_soups = []
+    mnode_list = []
+    p_list = []
+    pnode_list = []
     print_sites(movie_sites)
 
     #obtener HTML

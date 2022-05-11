@@ -21,15 +21,18 @@ def about():
 
 
 id = 0
+newId = 0
 names = {}
 
 
 @app.post("/createItem")
 def create_item(item: Item):
-    global id
-    id = id + 1
+    global id, newId
+    names = {}
+    id = newId
     names[id] = item.namesList
     printInput(names, id)
+    newId = id + 1
     return "Your id is " + str(id)
 
 @app.post("/getItem")
