@@ -3,17 +3,17 @@ from boto3.dynamodb.conditions import Key
 
 dynamodb = boto3.resource('dynamodb')
 
-table = dynamodb.Table('GraphGeneratorTest2')
+table = dynamodb.Table('GraphGeneratorTable')
+bytes_size = table.table_size_bytes
 
-
-if table is not None:
+if bytes_size > 0:
     print("delete table")
     table.delete()
 else:
     print("table does not exist")
 
 table = dynamodb.create_table (
-    TableName = 'GraphGeneratorTest2',
+    TableName = 'GraphGeneratorTable',
        KeySchema = [
            {
                'AttributeName': 'reqId',
