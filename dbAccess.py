@@ -22,11 +22,11 @@ def addItemToTable(nodesDic):
 
     element_id = element_id + 1
 
-def getItemFromTable(key1, key2):
+def getItemFromTable(key1):
     response = table.get_item(
         Key={
             'reqId': key1,
-            'graph': key2,
+            'graph': '1',
         }
     )
     print(response['Item'])

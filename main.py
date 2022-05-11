@@ -46,9 +46,8 @@ def create_item(item: Item):
     return "Your id is " + str(id)
 
 @app.post("/getItem")
-def create_item(key1: str, key2:str):
-    # getItemFromTable(key1, key2)
-    return getItemFromTable(key1, key2)
+def create_item(key: str):
+    return getItemFromTable(key)
 
 urls = []
 
