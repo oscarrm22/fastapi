@@ -3,7 +3,7 @@ from boto3.dynamodb.conditions import Key
 
 dynamodb = boto3.resource('dynamodb')
 
-table = dynamodb.Table('GraphGeneratorTable')
+table = dynamodb.Table('GraphGeneratorTest3')
 bytes_size = table.table_size_bytes
 
 if bytes_size > 0:
@@ -13,7 +13,7 @@ else:
     print("table does not exist")
 
 table = dynamodb.create_table (
-    TableName = 'GraphGeneratorTable',
+    TableName = 'GraphGeneratorTest3',
        KeySchema = [
            {
                'AttributeName': 'reqId',
