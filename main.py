@@ -59,7 +59,7 @@ def set_url(url: str):
 
 @app.post("/useURLS")
 def use_urls():
-    global urls
+    global urls, id, newId
     printInput(urls, id)
     num_of_urls = len(urls)
     urls = []
