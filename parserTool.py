@@ -34,8 +34,11 @@ properties = list(properties_dictionary.keys())
 def printInput(sitesList, id):
     global movie_sites
     print("Desde otro archivo: ", sitesList)
-    movie_sites = sitesList
-    start_request()
+    if len(sitesList) > 0:
+        movie_sites = sitesList
+        start_request()
+    else:
+        print("ERROR empty url list")
 
 
 

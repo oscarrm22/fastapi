@@ -59,7 +59,7 @@ def set_url(url: str):
     return "Last URL added: " + urls[-1]
 
 @app.post("/useURLS")
-def get_url(url: str):
+def use_urls():
     global urls
     printInput(urls, id)
     num_of_urls = len(urls)
