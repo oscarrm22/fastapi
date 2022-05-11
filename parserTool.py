@@ -253,12 +253,12 @@ class PNode:
 
 #**************************************************************************************************************************************
 def start_request():
-    global mnode_list, p_list, pnode_list, num_of_nodes
+    global mnode_list, p_list, pnode_list, num_of_nodes, movie_sites
     movie_soups = []
     mnode_list = []
     p_list = []
     pnode_list = []
-    print_sites(movie_sites)
+    print_sites("DBG 1, ",movie_sites)
 
     #obtener HTML
     load_data(movie_sites)
@@ -266,7 +266,7 @@ def start_request():
     #PRocesar Informacion de Wikipedia
     ## DE wikipedia
     wiki_idx = 0
-    print(len(movie_soups))
+    print("DBG 3, ",len(movie_soups))
     tables = movie_soups[wiki_idx].select("table")
     table_idx = find_table(tables)
     c1,c2 = get_text_from_table(tables[table_idx])
