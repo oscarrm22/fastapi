@@ -200,8 +200,6 @@ def create_links_dictionary(pnode_list, nodes_to_display):
     links_d = []
     link_id = 0
     for node in nodes_to_display:
-        
-        
         if node["username"] in p_list: #si es una persona   
             pnode = get_node_by_name(pnode_list, node["username"]) #obtener el nodo corresponidente
             for l in pnode.links:
@@ -259,6 +257,7 @@ def start_request():
     p_list = []
     pnode_list = []
     print_sites(movie_sites)
+    num_of_nodes = 0
 
     #obtener HTML
     load_data(movie_sites)

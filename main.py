@@ -50,6 +50,22 @@ def create_item(key1: str, key2:str):
     # getItemFromTable(key1, key2)
     return getItemFromTable(key1, key2)
 
+urls = []
+
+@app.post("/setURL")
+def set_url(url: str):
+    global urls
+    urls.append(url)
+    return "Last URL added: " + urls[-1]
+
+@app.post("/useURLS")
+def get_url(url: str):
+    global urls
+    printInput(urls, id)
+    num_of_urls = len(urls)
+    urls = []
+    return "Number of URLs: " + str(num_of_urls)
+
 
 # @app.post("/createItem2")
 # def create_item2(item: Item):
