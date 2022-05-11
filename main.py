@@ -66,10 +66,3 @@ def use_urls():
     id = newId
     newId = id + 1
     return "Number of URLs: " + str(num_of_urls) + ", Your ID is " + str(id)
-
-
-# @app.post("/createItem2")
-# def create_item2(item: Item):
-#     printInput(item.namesList)
-#     return "new name is " + item.namesList[-1]
-
