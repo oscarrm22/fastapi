@@ -31,10 +31,10 @@ properties_dictionary = {
 properties = list(properties_dictionary.keys())
 
 
-def printInput(dic, id):
+def printInput(sitesList, id):
     global movie_sites
-    print("Desde otro archivo: ", dic)
-    movie_sites = dic[id]
+    print("Desde otro archivo: ", sitesList)
+    movie_sites = sitesList
     start_request()
 
 
@@ -266,6 +266,7 @@ def start_request():
     #PRocesar Informacion de Wikipedia
     ## DE wikipedia
     wiki_idx = 0
+    print(len(movie_soups))
     tables = movie_soups[wiki_idx].select("table")
     table_idx = find_table(tables)
     c1,c2 = get_text_from_table(tables[table_idx])
