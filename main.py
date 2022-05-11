@@ -63,7 +63,9 @@ def use_urls():
     printInput(urls, id)
     num_of_urls = len(urls)
     urls = []
-    return "Number of URLs: " + str(num_of_urls)
+    id = newId
+    newId = id + 1
+    return "Number of URLs: " + str(num_of_urls) + ", Your ID is " + str(id)
 
 
 # @app.post("/createItem2")
